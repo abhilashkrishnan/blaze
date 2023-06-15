@@ -2,10 +2,10 @@ FILES = ./build/memory/memory.o ./build/vm/value.o ./build/vm/chunk.o ./build/de
 INCLUDES = -I./src
 FLAGS = -g -Wall
 
-all: ./build/memory/memory.o ./build/vm/chunk.o ./build/vm/value.o ./build/debug.o ./build/vm/vm.o ./bin/blazevm
+all: ./build/memory/memory.o ./build/vm/chunk.o ./build/vm/value.o ./build/debug.o ./build/vm/vm.o ./bin/blaze
 
-./bin/blazevm: ./src/main.c
-	gcc ${INCLUDES} ${FLAGS} ${FILES} ./src/main.c -o ./bin/blazevm
+./bin/blaze: ./src/main.c
+	gcc ${INCLUDES} ${FLAGS} ${FILES} ./src/main.c -o ./bin/blaze
 
 ./build/memory/memory.o: ./src/memory/memory.c
 	gcc ${INCLUDES} ${FLAGS} ./src/memory/memory.c -o ./build/memory/memory.o -c
